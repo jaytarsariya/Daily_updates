@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>login</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <style>
+    h1{
+  display: flex;
+  flex-direction: row;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif-;
+  color:darkcyan;
+  justify-content:center;                                                   }
+    form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+ 
+}
+form input{
+  width: 280px;
+  font-size: 20px;
+  padding: 10px;
+  margin: 10px 0px;
+  border-radius: 8px;
+  border: 1px solid green;
+
+}
+    .box {
+    margin-left: 150px;
+    margin-top: 70px;
+    background-color:rgb(241, 242, 226);
+      {{!-- border: 1px solid black; --}}
+      padding: 20px;
+      width: 1000px;
+      height: 450px;
+    }
+    .submit{
+  margin-top: 20px;
+  width: 150px;
+  height: 40px;
+  background-color: darkcyan;
+  color: rgb(255, 220, 220);
+  font-weight: 700;
+}
+body{
+  background-image: url(img/img1.jpeg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+} 
+tr, th{
+  
+  padding: 70px;
+  text-align: left;
+  
+}
+table{
+  color: red;
+}
+  
+  </style>
+</head>
+<body>
+  <div class="box">
+    <h1>user details</h1>
+    <hr>
+    <table class="table table-striped">
+ 
+    <tr>
+     
+      <th scope="col">Username</th>
+      <th scope="col">Email</th>
+      <th scope="col">Join-date</th>
+      <th scope="col">img</th>
+    </tr>
+    {{#each udata}}
+    <tr>
+      <td>{{this.uname}}</td>
+      <td>{{this.email}}</td>
+      <td>{{this.joindate}}</td>
+      <td> <img src="upload/{{this.img}}" alt="{{this.img}}" height="40px" width="40px"></td>
+      <td><a href="delete?did={{this._id}}" class="btn btn-danger">Delete</a> </td>
+      <td><a href="edit?eid={{this._id}}" class="btn warning">Edit</a> </td>
+    </tr>
+    {{/each}}
+    
+    
+  
+</table>
+    {{!-- <table >
+      <div  >
+       
+       <tr>
+        <th>Username</th>
+        <th>email</th>
+        <th>join-date</th>
+        <th>image</th>
+        
+      </tr>
+      
+      {{#each udata}}
+      <tr>
+        <td>{{this.uname}}</td>
+        <td>{{this.email}}</td>
+        <td>{{this.joindate}}</td>
+        <td>{{this.img}}</td>
+      </tr>
+      {{/each}}
+
+    </table> --}}
+  {{!-- <h1>LOGIN</h1>
+
+     <form action="">
+      <input type="email" name="email" placeholder="enter email">
+      <input type="text" name="pass" placeholder="enter password">
+      <button type="button" class="submit">login</button>
+      <p>Not have an account ? <a href="registration">Register here</a></p>
+      <a href="view" style="text-decoration: none;">view-User</a>
+     </form>
+     </div> --}}
+</body>
+</html>

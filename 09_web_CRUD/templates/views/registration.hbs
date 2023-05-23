@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>login</title>
+  <style>
+    h1{
+  display: flex;
+  flex-direction: row;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif-;
+  color:darkcyan;
+  justify-content:center;                                                   }
+    form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+ 
+}
+form input{
+  width: 280px;
+  font-size: 20px;
+  padding: 10px;
+  margin: 10px 0px;
+  border-radius: 8px;
+  border: 1px solid green;
+
+}
+    .box {
+    margin-left: 450px;
+    margin-top: 50px;
+    background-color:rgb(241, 242, 226);
+      {{!-- border: 1px solid black; --}}
+      padding: 20px;
+      width: 300px;
+      height: 350px;
+    }
+    .submit{
+  margin-top: 20px;
+  width: 150px;
+  height: 40px;
+  background-color: darkcyan;
+  color: rgb(255, 220, 220);
+  font-weight: 700;
+}
+body{
+  background-image: url(/img/img1.jpeg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+  
+  </style>
+</head>
+<body>
+  <div class="box">
+  <h1>CREATE AN ACCOUNT</h1>
+
+     <form action="do_register" method="post" enctype="multipart/form-data">
+     <span class="text-success">{{msg}}</span>
+      <input type="text" name="uname" placeholder="enter your name">
+      <input type="email" name="email" placeholder="enter email">
+      <input type="password" name="pass" placeholder="enter password">
+      <input type="file" id="form3Example4cga" placeholder="profile picture" name="img" >
+      <button type="submit" class="submit">submit</button>
+      <p>already have an account ? <a href="login">login here</a> </p>
+     </form>
+     </div>
+
+</body>
+</html>
+
+
+

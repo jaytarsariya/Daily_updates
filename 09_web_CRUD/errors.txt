@@ -1,0 +1,14 @@
+// router.js ma line no. 72 ma (fs module is not working)  == solved
+
+
+
+
+// do_update router  ma  data nathi avta. === solved
+
+// update.hbs ma last ma (  / ) aa su che ????
+
+
+
+
+// que. 1 what is multer, and a sha maate use thai???
+// que. 2 in hbs file , form , ma enctype su che ???
